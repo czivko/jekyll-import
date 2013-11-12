@@ -55,6 +55,7 @@ module JekyllImport
           unless post["link-description"].nil?
             content << "<br/>" + post["link-description"]
           end
+          p content
         when "photo"
           title = post["photo-caption"]
           max_size = post.keys.map{ |k| k.gsub("photo-url-", "").to_i }.max
